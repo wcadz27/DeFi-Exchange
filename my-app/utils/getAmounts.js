@@ -58,7 +58,7 @@ export const getReserveOfCDTokens = async (provider) => {
     );
     const reserve = await exchangeContract.getReserve();
     return reserve;
-  } catch {
+  } catch (err) {
     console.error(err);
   }
 };
